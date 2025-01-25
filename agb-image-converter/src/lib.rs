@@ -198,15 +198,14 @@ pub fn include_background_gfx(input: TokenStream) -> TokenStream {
 
     let module_name = config.module_name.clone();
     let as_pub = config.as_pub;
-    include_gfx_from_config(config, as_pub, module_name, Path::new(&root), 16)
+    include_gfx_from_config(config, as_pub, module_name, Path::new(&root))
 }
 
-pub fn include_gfx_from_config(
+fn include_gfx_from_config(
     config: Box<dyn config::Config>,
     as_pub: bool,
     module_name: syn::Ident,
     parent: &Path,
-    tile_size: usize
 ) -> TokenStream {
     let images = config.images();
 
@@ -222,6 +221,7 @@ pub fn include_gfx_from_config(
 
         match settings.colours() {
             Colours::Colours16 => {
+                let tile_size = 16;
                 if image.width % tile_size != 0 || image.height % tile_size != 0 {
                     panic!("Image size not a multiple of tile size");
                 }
