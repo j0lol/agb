@@ -16,7 +16,7 @@ pub mod bitmap3;
 /// Graphics mode 4. Bitmap 4 provides two 8-bit paletted framebuffers with page switching.
 pub mod bitmap4;
 /// Test logo of agb.
-pub mod example_logo;
+// pub mod example_logo;
 pub mod object;
 /// Palette type.
 pub mod palette16;
