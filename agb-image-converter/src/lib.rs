@@ -234,7 +234,7 @@ fn include_gfx_from_config(
                     config.transparent_colour(),
                 );
 
-                let num_tiles = image.width * image.height / 8usize.pow(2);
+                let num_tiles = image.width * image.height / tile_size.pow(2);
                 assignment_offsets.insert(name, assignment_offset);
                 assignment_offset += num_tiles;
             }
