@@ -221,7 +221,7 @@ fn include_gfx_from_config(
 
         match settings.colours() {
             Colours::Colours16 => {
-                let tile_size = 8;
+                let tile_size = 16;
                 if image.width % tile_size != 0 || image.height % tile_size != 0 {
                     panic!("Image size not a multiple of tile size");
                 }
