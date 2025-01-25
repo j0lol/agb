@@ -575,7 +575,7 @@ fn add_image_to_tile_data(
             let assignment = if is_sprite {
                 assignment_offset
             } else {
-                remap_index[y * tiles_x + x] + assignment_offset
+                remap_index.get(y * tiles_x + x).expect("21398u408972134") + assignment_offset
             };
 
             let palette_index = optimiser.assignments[assignment];
