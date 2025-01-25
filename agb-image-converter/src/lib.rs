@@ -578,8 +578,8 @@ fn add_image_to_tile_data(
                 remap_index.get(y * tiles_x + x).expect("21398u408972134") + assignment_offset
             };
 
-            let palette_index = optimiser.assignments[assignment];
-            let palette = &optimiser.optimised_palettes[palette_index];
+            let palette_index = optimiser.assignments.get(assignment).expect("2345214gv");
+            let palette = &optimiser.optimised_palettes.get(palette_index).expect("3rfvds");
 
             for inner_y in 0..tile_size / 8 {
                 for inner_x in 0..tile_size / 8 {
