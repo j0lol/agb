@@ -566,7 +566,7 @@ fn add_image_to_tile_data(
     is_sprite: bool,
     remap_index: &[usize],
 ) {
-    let tile_size = 8;
+    let tile_size = 16;
     let tiles_x = image.width / tile_size;
     let tiles_y = image.height / tile_size;
 
@@ -600,7 +600,7 @@ fn add_image_256_to_tile_data(
     image: &Image,
     optimiser: &Palette16OptimisationResults,
 ) {
-    let tile_size = 8;
+    let tile_size = 16;
     let tiles_x = image.width / tile_size;
     let tiles_y = image.height / tile_size;
 
